@@ -37,7 +37,7 @@ Ce projet est une application Web basée sur **Spring Boot**, **Spring MVC**, **
 
 ### 1️⃣ Affichage initial de la liste des patients
 
-![Liste des patients](static/captures/1.png)
+![Liste des patients](screnne\1.png)
 
 ---
 
