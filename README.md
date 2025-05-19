@@ -43,43 +43,43 @@ Ce projet est une application Web basée sur **Spring Boot**, **Spring MVC**, **
 
 ### 2️⃣ Console H2 - Contenu de la base de données
 
-![Console H2](static/captures/2.png)
+![Console H2](screnne/2.png)
 
 ---
 
 ### 3️⃣ Exemple de pagination
 
-![Pagination - page 12](static/captures/3.png)
+![Pagination - page 12](screnne/3.png)
 
 ---
 
 ### 4️⃣ Une autre page paginée (page 9)
 
-![Pagination - page 9](static/captures/4.png)
+![Pagination - page 9](screnne/4.png)
 
 ---
 
 ### 5️⃣ Résultat d'une recherche par nom "imad"
 
-![Recherche IMAD](static/captures/5.png)
+![Recherche IMAD](screnne/5.png)
 
 ---
 
 ### 6️⃣ Résultat d'une recherche par lettre "A"
 
-![Recherche par A](static/captures/6.png)
+![Recherche par A](screnne/6.png)
 
 ---
 
 ### 7️⃣ Résultat de la recherche avec pagination
 
-![Recherche + Pagination](static/captures/7.png)
+![Recherche + Pagination](screnne/7.png)
 
 ---
 
 ### 8️⃣ Version finale stylisée de l'interface
 
-![UI Bootstrap améliorée](static/captures/8.png)
+![UI Bootstrap améliorée](screnne/8.png)
 
 ---
 
@@ -111,6 +111,6 @@ src/
 ```
 
 👤 Auteur
-Projet réalisé dans le cadre de l'activité pratique du module Spring MVC - JEE
+Projet réalisé dans le cadre de L'Activité Pratique N°3 - Spring MVC
 Nom : IMAD EL KHELYFY
 
