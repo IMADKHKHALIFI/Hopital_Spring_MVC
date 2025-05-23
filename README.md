@@ -109,6 +109,70 @@ src/
 │   │   └── templates/patients.html
 │   └── application.properties
 ```
+---
+
+## 🔁 Partie 2 : Validation, Template et Navigation
+
+👉 [📺 Vidéo Partie 2](https://www.youtube.com/watch?v=eoBE745lDE0)
+
+Dans cette deuxième partie du projet, plusieurs améliorations fonctionnelles et visuelles ont été apportées :
+
+- ✅ Création d’un fichier `template1.html` pour unifier l’en-tête et le pied de page
+- ✅ Ajout de la validation des formulaires avec `@Valid` et `BindingResult`
+- ✅ Affichage de messages de succès après modification ou ajout
+- ✅ Maintien de la page courante et du mot-clé de recherche après édition
+- ✅ Utilisation intelligente des couleurs Bootstrap :
+  - 🔵 Recherche : `btn-primary`
+  - 🟢 Ajouter : `btn-success`
+  - 🟡 Modifier : `btn-warning`
+  - 🔴 Supprimer : `btn-danger`
+- ✅ Tooltips Bootstrap pour les boutons
+- ✅ UI responsive, claire et professionnelle
+
+---
+
+## 🖼️ Nouvelles Captures d'écran (Partie 2)
+
+### 9️⃣ Interface de modification avec retour vers la bonne page + message de succès
+
+![Retour même page modifiée](screnne/ce%20que%20je%20modifie%20un%20patient%20il%20va%20retourner%20dans%20la%20m%C3%AAme%20page.png)
+
+---
+
+### 🔟 Formulaire de modification du patient
+
+![Form modification patient](screnne/10.png)
+
+---
+
+### 🔁 Formulaire d’ajout d’un nouveau patient
+
+![Formulaire ajout](screnne/11.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 👤 Auteur
 Projet réalisé dans le cadre de L'Activité Pratique N°3 - Spring MVC
