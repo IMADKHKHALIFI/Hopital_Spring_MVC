@@ -27,21 +27,21 @@ public class HopitalSpringMvcApplication implements CommandLineRunner {
         patient1.setNom("Mohamed");
         patient1.setEstMalade(true);
         patient1.setDateNaissance(new Date());
-        patient1.setScore(23);
+        patient1.setScore(123);
         patientRepository.save(patient1);
 
         //En utilisant constructeur avec paramaitre
-        Patient patient2 = new Patient(null, "IMAD", new Date(), false, 10);
+        Patient patient2 = new Patient(null, "IMAD", new Date(), false, 110);
         patientRepository.save(patient2);
         // En utlise Builder
         Patient patient3 = Patient.builder()
                 .nom("Hamza")
                 .dateNaissance(new Date())
                 .estMalade(true)
-                .score(22)
+                .score(122)
                 .build();
         patientRepository.save(patient3);
 
-        patientRepository.save(new Patient(null,"Anas",new Date(),false,55));
+        patientRepository.save(new Patient(null,"Anas",new Date(),false,155));
     }
 }
