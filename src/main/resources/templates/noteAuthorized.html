@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template1}">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Patients</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.5/css/bootstrap.min.css">
+    <style>
+        .btn span {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn:hover span {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+<div layout:fragment="content1">
+    <div class="alert alert-danger m-3" >
+        <h2>Not Authorazied</h2>
+    </div>
+</div>
+</body>
+</html>

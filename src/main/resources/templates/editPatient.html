@@ -7,6 +7,36 @@
   <meta charset="UTF-8">
   <title>Modifier Patient</title>
   <link rel="stylesheet" href="/webjars/bootstrap/5.3.5/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #fffefc, #f3f9ff);
+    }
+
+    .card {
+      border-radius: 1rem;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .btn span {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn:hover span {
+      opacity: 1;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -21,18 +51,20 @@
 
           <div class="mb-3">
             <label for="nom" class="form-label">Nom</label>
-            <input id="nom" class="form-control" type="text" name="nom" th:value="${patient.nom}">
+            <input id="nom" class="form-control" type="text" name="nom" th:value="${patient.nom}" placeholder="Ex: Ahmed">
             <span class="text-danger small" th:errors="${patient.nom}"></span>
           </div>
 
           <div class="mb-3">
-            <label class="form-label">Date Naissance</label>
-            <input class="form-control" type="date" name="dateNaissance" th:value="${#dates.format(patient.dateNaissance, 'yyyy-MM-dd')}">
+            <label class="form-label">Date de Naissance</label>
+            <input class="form-control" type="date" name="dateNaissance"
+                   th:value="${#dates.format(patient.dateNaissance, 'yyyy-MM-dd')}">
             <span class="text-danger small" th:errors="${patient.dateNaissance}"></span>
           </div>
 
           <div class="mb-3 form-check">
-            <input class="form-check-input" type="checkbox" name="estMalade" th:checked="${patient.estMalade}" id="estMalade">
+            <input class="form-check-input" type="checkbox" name="estMalade"
+                   th:checked="${patient.estMalade}" id="estMalade">
             <label class="form-check-label" for="estMalade">Est Malade</label>
             <br>
             <span class="text-danger small" th:errors="${patient.estMalade}"></span>
@@ -40,13 +72,17 @@
 
           <div class="mb-3">
             <label class="form-label">Score</label>
-            <input class="form-control" type="text" name="score" th:value="${patient.score}">
+            <input class="form-control" type="text" name="score" th:value="${patient.score}" placeholder="Ex: 85">
             <span class="text-danger small" th:errors="${patient.score}"></span>
           </div>
 
           <div class="d-flex justify-content-between">
-            <a th:href="@{/index}" class="btn btn-secondary">↩️ Retour</a>
-            <button type="submit" class="btn btn-warning">✅ Modifier</button>
+            <a th:href="@{/index(page=${page}, keyword=${keyword})}" class="btn btn-secondary">
+              🔙 <span>Retour</span>
+            </a>
+            <button type="submit" class="btn btn-warning">
+              ✅ <span>Modifier</span>
+            </button>
           </div>
         </form>
       </div>

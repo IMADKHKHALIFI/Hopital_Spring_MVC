@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white text-center">
+                    <h5>Connexion</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" th:action="@{/login}">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Nom d'utilisateur</label>
+                            <input type="text" id="username" name="username" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Mot de passe</label>
+                            <input type="password" id="password" name="password" class="form-control" required>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <label class="form-check-label" >
+                                <input class="form-check-input" type="checkbox" name="remember-me" >Remimbre-Me
+                            </label>
+                        </div>
+
+                        <div th:if="${param.error}" class="alert alert-danger">
+                            Nom d'utilisateur ou mot de passe incorrect.
+                        </div>
+                        <div th:if="${param.logout}" class="alert alert-success">
+                            Déconnecté avec succès.
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

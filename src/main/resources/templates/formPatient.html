@@ -7,43 +7,72 @@
     <meta charset="UTF-8">
     <title>Form Patients</title>
     <link rel="stylesheet" href="/webjars/bootstrap/5.3.5/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+        }
+
+        .card {
+            border: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.2rem rgba(13,110,253,.25);
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(10px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
 </head>
 
 <body>
 <div layout:fragment="content1">
     <div class="col-md-6 offset-md-3 mt-5">
-        <div class="card shadow rounded bg-light">
-            <div class="card-body">
-                <h4 class="mb-4 text-center text-primary">Ajouter un patient</h4>
+        <div class="card shadow-lg rounded-4 bg-white">
+            <div class="card-body p-4">
+                <h4 class="mb-4 text-center text-primary fw-bold">➕ Ajouter un patient</h4>
 
                 <form method="post" th:action="@{save}">
                     <div class="mb-3">
-                        <label for="nom" class="form-label">Nom</label>
-                        <input id="nom" class="form-control" type="text" name="nom" th:value="${patient.nom}">
-                        <span class="text-danger small" th:errors="${patient.nom}"></span>
+                        <label for="nom" class="form-label fw-semibold">Nom</label>
+                        <input id="nom" class="form-control" type="text" name="nom" th:value="${patient.nom}" placeholder="Entrez le nom du patient">
+                        <span class="text-danger small fst-italic" th:errors="${patient.nom}"></span>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Date Naissance</label>
+                        <label class="form-label fw-semibold">Date de Naissance</label>
                         <input class="form-control" type="date" name="dateNaissance" th:value="${patient.dateNaissance}">
-                        <span class="text-danger small" th:errors="${patient.dateNaissance}"></span>
+                        <span class="text-danger small fst-italic" th:errors="${patient.dateNaissance}"></span>
                     </div>
 
                     <div class="mb-3 form-check">
                         <input class="form-check-input" type="checkbox" name="estMalade" th:checked="${patient.estMalade}" id="estMalade">
                         <label class="form-check-label" for="estMalade">Est Malade</label>
                         <br>
-                        <span class="text-danger small" th:errors="${patient.estMalade}"></span>
+                        <span class="text-danger small fst-italic" th:errors="${patient.estMalade}"></span>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Score</label>
-                        <input class="form-control" type="text" name="score" th:value="${patient.score}">
-                        <span class="text-danger small" th:errors="${patient.score}"></span>
+                        <label class="form-label fw-semibold">Score</label>
+                        <input class="form-control" type="text" name="score" th:value="${patient.score}" placeholder="Ex: 120">
+                        <span class="text-danger small fst-italic" th:errors="${patient.score}"></span>
                     </div>
 
                     <div class="text-end">
-                        <button type="submit" class="btn btn-primary px-4">💾 Save</button>
+                        <button type="submit" class="btn btn-primary btn-lg shadow-sm px-4">💾 Enregistrer</button>
                     </div>
                 </form>
             </div>
