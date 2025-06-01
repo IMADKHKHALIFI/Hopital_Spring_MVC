@@ -149,7 +149,21 @@ Dans cette deuxième partie du projet, plusieurs améliorations fonctionnelles e
 
 ![Formulaire ajout](screnne/11.png)
 
+## 🔐 Partie 3 : Sécurité avec Spring Security
 
+### Fonctionnalités sécurité :
+
+- Formulaire login `/login`
+- Redirection `/notAuthorized`
+- Attribution dynamique via `app_user_roles`
+- Encodage de mot de passe `BCryptPasswordEncoder`
+
+### Captures Partie 3
+
+- ![Not Authorized](screnne/Not%20Authorized.png)
+- ![Rôle lié à l’utilisateur](screnne/RoleToUser.png)
+
+---
 
 
 
