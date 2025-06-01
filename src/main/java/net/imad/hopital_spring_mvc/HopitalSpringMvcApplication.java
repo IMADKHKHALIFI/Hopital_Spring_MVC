@@ -3,6 +3,7 @@ package net.imad.hopital_spring_mvc;
 import lombok.Data;
 import net.imad.hopital_spring_mvc.Repository.PatientRepository;
 import net.imad.hopital_spring_mvc.entities.Patient;
+import net.imad.hopital_spring_mvc.security.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -55,7 +56,7 @@ public class HopitalSpringMvcApplication implements CommandLineRunner {
     }
 
 
-    @Bean
+    //@Bean
     CommandLineRunner commandLineRunner(JdbcUserDetailsManager jdbcUserDetailsManager ) {
         PasswordEncoder passwordEncoder = passwordEncoder();
         return args -> {
@@ -80,6 +81,29 @@ public class HopitalSpringMvcApplication implements CommandLineRunner {
                             .password(passwordEncoder.encode("1234"))
                             .roles("USER","ADMIN")
                             .build());
+        };
+    }
+
+
+    @Bean
+    CommandLineRunner commandLineRunnerUserDetails(AccountService accountService) {
+        return args -> {
+            // Ajoute les rôles si non existants
+            if (accountService.loadRoleByName("USER") == null)
+                accountService.addNewRole("USER");
+            if (accountService.loadRoleByName("ADMIN") == null)
+                accountService.addNewRole("ADMIN");
+
+            // Ajoute les utilisateurs si non existants
+            accountService.addNewUser("user1", "1234", "user1@gmail.com", "1234");
+            accountService.addNewUser("user2", "1234", "user2@gmail.com", "1234");
+            accountService.addNewUser("admin", "1234", "admin@gmail.com", "1234");
+
+            // Attribution des rôles
+            accountService.addRoleToUser("admin", "ADMIN");
+            accountService.addRoleToUser("admin", "USER");
+            accountService.addRoleToUser("user1", "USER");
+            accountService.addRoleToUser("user2", "USER");
         };
     }
 
