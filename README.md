@@ -170,8 +170,23 @@ Dans cette deuxième partie du projet, plusieurs améliorations fonctionnelles e
 
 ---
 
+---
 
-👤 Auteur
-Projet réalisé dans le cadre de L'Activité Pratique N°3 - Spring MVC
-Nom : IMAD EL KHELYFY
+## ✅ Conclusion
 
+Ce projet représente une implémentation complète et évolutive d’une application de gestion des patients en milieu hospitalier, développée en plusieurs phases pédagogiques.
+
+Au fil des parties, nous avons progressivement intégré :
+- L'affichage et la gestion CRUD des patients via Spring MVC et Thymeleaf.
+- L'amélioration de l'interface utilisateur avec Bootstrap et pagination dynamique.
+- La validation des formulaires et la gestion intelligente des retours utilisateur.
+- Une sécurisation robuste avec Spring Security, incluant la gestion des rôles, l'encodage des mots de passe et les restrictions d’accès.
+
+Ce projet démontre l’importance de la structuration MVC, des bonnes pratiques de développement (validation, sécurité, réutilisation de templates) et offre une base solide pour tout système d’administration hospitalier évolutif.
+
+> 🔐 Il met en œuvre toutes les briques fondamentales de Spring Boot dans un contexte réaliste et complet.
+
+---
+
+👨‍💻 Réalisé par : **IMAD EL KHELYFY**  
+🎓 Activité Pratique N°3 – Spring MVC & Sécurité
