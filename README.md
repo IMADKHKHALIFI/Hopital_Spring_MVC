@@ -158,9 +158,15 @@ Dans cette deuxième partie du projet, plusieurs améliorations fonctionnelles e
 - Attribution dynamique via `app_user_roles`
 - Encodage de mot de passe `BCryptPasswordEncoder`
 
-### Captures Partie 3
-- ![Not Authorized](screnne/Not%20Authorized.png)
-- ![Rôle lié à l’utilisateur](screnne/RoleToUser.png)
+## 🖼️ Captures Partie 3
+
+### 1️⃣ Message d’erreur “Not Authorized” après tentative d’accès non autorisé
+
+![Not Authorized](screnne/Not%20Authorized%20.png)
+
+### 2️⃣ Table `app_user_roles` indiquant les rôles attribués aux utilisateurs dans la base
+
+![Rôle lié à l’utilisateur](screnne/RoleToUser.png)
 
 ---
 
